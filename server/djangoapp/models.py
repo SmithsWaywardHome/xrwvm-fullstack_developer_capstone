@@ -15,7 +15,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 class CarMake(models.Model):
     ORIGIN_CHOICES = [
         ("DOMESTIC","Domestic"),
-        ("FOREIGN","Foreign")
+        ("IMPORT","Import")
     ]
     
     name = models.CharField(
@@ -31,7 +31,7 @@ class CarMake(models.Model):
     )
 
     def __str__(self):
-        return f'Name: {self.Name}' 
+        return f'name: {self.name}' 
 
 # <HINT> Create a Car Model model `class CarModel(models.Model):`:
 # - Many-To-One relationship to Car Make model (One Car Make has many
@@ -60,6 +60,7 @@ class CarModel(models.Model):
         ("DIESEL","Diesel"),
         ("ELECTRIC","Electric"),
         ("GAS","Gas"),
+        ("HYBRID","Hybrid"),
         ("HYDROGEN","Hydrogen"),
         ("MULTIFUEL","Mulitfuel")
     ]
@@ -96,4 +97,4 @@ class CarModel(models.Model):
     )
 
     def __str__(self):
-        return f'Name: {self.Name}'
+        return f'name: {self.name}'
