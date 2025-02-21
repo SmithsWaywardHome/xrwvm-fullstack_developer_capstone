@@ -99,7 +99,7 @@ def initiate():
          "year": 2023,
          "drivetrain": "Gas",
          "car_make": car_make_instances[4]},
-        # Add more CarModel instances as 
+        # Add more CarModel instances as needed
         {"name": "E-Tron",
          "type": "SUV",
          "year": 2023,
