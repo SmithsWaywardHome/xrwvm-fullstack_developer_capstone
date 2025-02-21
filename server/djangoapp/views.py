@@ -113,7 +113,7 @@ def get_dealer_reviews(request, dealer_id):
 def get_cars(request):
     makesCount = CarMake.objects.filter().count()
     print(makesCount)
-    if (makesCount == 0): 
+    if (makesCount == 0):
         initiate()
     car_models = CarModel.objects.select_related('car_make')
     modelsCount = CarModel.objects.all().count()
@@ -139,7 +139,7 @@ def get_dealer_details(request, dealer_id):
 
 # Create a `add_review` view to submit a review
 def add_review(request):
-    if (request.user.is_anonymous == False): 
+    if request.user.is_anonymous is False:
         data = json.loads(request.body)
         try:
             post_review(data)
