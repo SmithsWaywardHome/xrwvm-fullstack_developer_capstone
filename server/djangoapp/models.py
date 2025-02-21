@@ -12,9 +12,9 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 # - __str__ method to print a car make object
 
 
-class CarMake(models.Model): 
+class CarMake(models.Model):
     ORIGIN_CHOICES = [
-        ("DOMESTIC", "Domestic"), 
+        ("DOMESTIC", "Domestic"),
         ("IMPORT", "Import")
     ]
 
@@ -26,11 +26,11 @@ class CarMake(models.Model):
 
     origin = models.CharField(
         max_length=8,
-        choices=ORIGIN_CHOICES, 
+        choices=ORIGIN_CHOICES,
         default='0'
     )
 
-    def __str__(self): 
+    def __str__(self):
         return f'name: {self.name}' 
 
 # <HINT> Create a Car Model model `class CarModel(models.Model):`:
@@ -44,25 +44,25 @@ class CarMake(models.Model):
 # - __str__ method to print a car make object
 
 
-class CarModel(models.Model): 
+class CarModel(models.Model):
     TYPE_CHOICES = [
-        ("COUPE", "Coupe"), 
-        ("CROSSOVER", "Crossover"), 
-        ("DELIVERY VAN", "Delivery Van"), 
-        ("HATCHBACK", "Hatchback"), 
-        ("MINIVAN", "Minivan"), 
-        ("PICKUP", "Pickup"), 
-        ("SEDAN", "Sedan"), 
-        ("SUV", "SUV"), 
+        ("COUPE", "Coupe"),
+        ("CROSSOVER", "Crossover"),
+        ("DELIVERY VAN", "Delivery Van"),
+        ("HATCHBACK", "Hatchback"),
+        ("MINIVAN", "Minivan"),
+        ("PICKUP", "Pickup"),
+        ("SEDAN", "Sedan"),
+        ("SUV", "SUV"),
         ("WAGON", "Wagon")
     ]
 
     DRIVETRAIN_CHOICES = [
-        ("DIESEL", "Diesel"), 
-        ("ELECTRIC", "Electric"), 
-        ("GAS", "Gas"), 
-        ("HYBRID", "Hybrid"), 
-        ("HYDROGEN", "Hydrogen"), 
+        ("DIESEL", "Diesel"),
+        ("ELECTRIC", "Electric"),
+        ("GAS", "Gas"),
+        ("HYBRID", "Hybrid"),
+        ("HYDROGEN", "Hydrogen"),
         ("MULTIFUEL", "Mulitfuel")
     ]
 
@@ -71,7 +71,7 @@ class CarModel(models.Model):
     )
 
     car_make = models.ForeignKey(
-        CarMake, 
+        CarMake,
         on_delete=models.CASCADE
     )
 
@@ -80,15 +80,15 @@ class CarModel(models.Model):
     )
 
     type = models.CharField(
-        max_length=12, 
-        choices=TYPE_CHOICES, 
-        default='SUV' 
+        max_length=12,
+        choices=TYPE_CHOICES,
+        default='SUV'
     )
 
     year = models.IntegerField(
-        default=2023, 
+        default=2023,
         validators=[
-            MaxValueValidator(2023), 
+            MaxValueValidator(2023),
             MinValueValidator(2015)
         ]
     )
@@ -99,5 +99,5 @@ class CarModel(models.Model):
         default='ELECTRIC'
     )
 
-    def __str__(self): 
+    def __str__(self):
         return f'name: {self.name}'
