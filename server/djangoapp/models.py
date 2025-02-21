@@ -1,7 +1,7 @@
 # Uncomment the following imports before adding the Model code
 
 from django.db import models
-from django.utils.timezone import now
+# from django.utils.timezone import now
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
@@ -12,18 +12,19 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 # - Any other fields you would like to include in car make model
 # - __str__ method to print a car make object
 
+
 class CarMake(models.Model):
     ORIGIN_CHOICES = [
         ("DOMESTIC","Domestic"),
         ("IMPORT","Import")
     ]
-    
+
     name = models.CharField(
         max_length=64
     )
-    
+
     description = models.TextField()
-    
+
     origin = models.CharField(
         max_length=8,
         choices=ORIGIN_CHOICES,
@@ -43,25 +44,26 @@ class CarMake(models.Model):
 # - Any other fields you would like to include in car model
 # - __str__ method to print a car make object
 
+
 class CarModel(models.Model):
     TYPE_CHOICES = [
-        ("COUPE","Coupe"),
-        ("CROSSOVER","Crossover"),
-        ("DELIVERY VAN","Delivery Van"),
-        ("HATCHBACK","Hatchback"),
-        ("MINIVAN","Minivan"),
-        ("PICKUP","Pickup"),
-        ("SEDAN","Sedan"),
-        ("SUV","SUV"),
+        ("COUPE","Coupe"), 
+        ("CROSSOVER","Crossover"), 
+        ("DELIVERY VAN","Delivery Van"), 
+        ("HATCHBACK","Hatchback"), 
+        ("MINIVAN","Minivan"), 
+        ("PICKUP","Pickup"), 
+        ("SEDAN","Sedan"), 
+        ("SUV","SUV"), 
         ("WAGON","Wagon")
     ]
 
     DRIVETRAIN_CHOICES = [
-        ("DIESEL","Diesel"),
-        ("ELECTRIC","Electric"),
-        ("GAS","Gas"),
-        ("HYBRID","Hybrid"),
-        ("HYDROGEN","Hydrogen"),
+        ("DIESEL","Diesel"), 
+        ("ELECTRIC","Electric"), 
+        ("GAS","Gas"), 
+        ("HYBRID","Hybrid"), 
+        ("HYDROGEN","Hydrogen"), 
         ("MULTIFUEL","Mulitfuel")
     ]
 
@@ -77,7 +79,7 @@ class CarModel(models.Model):
     dealer_id = models.IntegerField(
         default=0
     )
-    
+
     type = models.CharField(
         max_length=12,
         choices=TYPE_CHOICES,
