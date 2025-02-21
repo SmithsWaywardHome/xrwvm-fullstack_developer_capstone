@@ -28,6 +28,7 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+## pylint: disable=line-too-long
 ALLOWED_HOSTS = [
     'localhost',
     'https://collinsmith-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai',
@@ -39,6 +40,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://collinsmith-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',
     'https://collinsmith-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
 ]
+## pylint: enable=line-too-long
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
@@ -100,6 +102,7 @@ DATABASES = {
     }
 }
 
+## pylint: disable=line-too-long
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
@@ -118,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+## pylint: enable=line-too-long
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
