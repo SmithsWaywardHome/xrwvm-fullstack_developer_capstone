@@ -1,17 +1,14 @@
-For troubleshooting information visit: https://cloud.ibm.com/docs/codeengine?topic=codeengine-troubleshoot-apps.
-Run 'ibmcloud ce application events -n sentianalyzer' to get the system events of the application instances.
-Run 'ibmcloud ce application logs -f -n sentianalyzer' to follow the logs of the application instances.
 OK
 
 Name:               sentianalyzer  
-ID:                 1cf640b1-8b3c-407e-bc64-8b4142f0b5e9  
+ID:                 18eaf23c-bb4b-4d4d-b3cc-7f6be2a35e81  
 Project Name:       Code Engine - sn-labs-collinsmith  
-Project ID:         fa2e2813-3477-4622-bcf8-7ca72c591b13  
-Age:                45s  
-Created:            2025-02-20T13:06:36-05:00  
-URL:                https://sentianalyzer.1s5ez35ky6uh.us-south.codeengine.appdomain.cloud  
-Cluster Local URL:  http://sentianalyzer.1s5ez35ky6uh.svc.cluster.local  
-Console URL:        https://cloud.ibm.com/codeengine/project/us-south/fa2e2813-3477-4622-bcf8-7ca72c591b13/application/sentianalyzer/configuration  
+Project ID:         d132aceb-92be-40e5-a73e-ee7b9ed83cab  
+Age:                46s  
+Created:            2025-05-12T18:27:29-04:00  
+URL:                https://sentianalyzer.1vd29ogku451.us-south.codeengine.appdomain.cloud  
+Cluster Local URL:  http://sentianalyzer.1vd29ogku451.svc.cluster.local  
+Console URL:        https://cloud.ibm.com/codeengine/project/us-south/d132aceb-92be-40e5-a73e-ee7b9ed83cab/application/sentianalyzer/configuration  
 Status Summary:     Application deployed successfully  
 
 Environment Variables:    
@@ -19,9 +16,9 @@ Environment Variables:
   Literal  CE_API_BASE_URL  https://api.us-south.codeengine.cloud.ibm.com  
   Literal  CE_APP           sentianalyzer  
   Literal  CE_DOMAIN        us-south.codeengine.appdomain.cloud  
-  Literal  CE_PROJECT_ID    fa2e2813-3477-4622-bcf8-7ca72c591b13  
+  Literal  CE_PROJECT_ID    d132aceb-92be-40e5-a73e-ee7b9ed83cab  
   Literal  CE_REGION        us-south  
-  Literal  CE_SUBDOMAIN     1s5ez35ky6uh  
+  Literal  CE_SUBDOMAIN     1vd29ogku451  
 Image:                  us.icr.io/sn-labs-collinsmith/senti_analyzer  
 Resource Allocation:      
   CPU:                1  
@@ -33,10 +30,10 @@ Port:                   5000
 
 Revisions:          
   sentianalyzer-00001:    
-    Age:                45s  
+    Age:                46s  
     Latest:             true  
     Traffic:            100%  
-    Image:              us.icr.io/sn-labs-collinsmith/senti_analyzer (pinned to 86a37f)  
+    Image:              us.icr.io/sn-labs-collinsmith/senti_analyzer (pinned to 706037)  
     Running Instances:  1  
 
 Runtime:            
@@ -45,6 +42,7 @@ Runtime:
   Minimum Scale:     0  
   Scale Down Delay:  0  
   Timeout:           300  
+  Trusted profiles:  disabled  
 
 Readiness Probe:    
   Type:  tcp  
@@ -53,14 +51,18 @@ Readiness Probe:
 Conditions:         
   Type                 OK    Age  Reason  
   ConfigurationsReady  true  32s    
-  Ready                true  25s    
-  RoutesReady          true  25s    
+  Ready                true  20s    
+  RoutesReady          true  20s    
 
 Events:             
   Type    Reason   Age  Source              Messages  
-  Normal  Created  46s  service-controller  Created Configuration "sentianalyzer"  
-  Normal  Created  46s  service-controller  Created Route "sentianalyzer"  
+  Normal  Created  47s  service-controller  Created Configuration "sentianalyzer"  
+  Normal  Created  47s  service-controller  Created Route "sentianalyzer"  
 
 Instances:          
-  Name                                             Revision             Running  Status   Restarts  Age  
-  sentianalyzer-00001-deployment-6d68b95fd6-clnll  sentianalyzer-00001  3/3      Running  0         45s  
+  Name                                            Revision             Running  Status   Restarts  Age  
+  sentianalyzer-00001-deployment-696bc57b4-77r7j  sentianalyzer-00001  3/3      Running  0         46s  
+
+For troubleshooting information visit: https://cloud.ibm.com/docs/codeengine?topic=codeengine-troubleshoot-apps.
+Run 'ibmcloud ce application events -n sentianalyzer' to get the system events of the application instances.
+Run 'ibmcloud ce application logs -f -n sentianalyzer' to follow the logs of the application instances.
