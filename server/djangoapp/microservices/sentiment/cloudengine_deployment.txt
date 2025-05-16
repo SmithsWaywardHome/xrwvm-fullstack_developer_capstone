@@ -1,14 +1,14 @@
 OK
 
 Name:               sentianalyzer  
-ID:                 18eaf23c-bb4b-4d4d-b3cc-7f6be2a35e81  
+ID:                 1f05cae9-612b-4011-903e-a4c507580744  
 Project Name:       Code Engine - sn-labs-collinsmith  
-Project ID:         d132aceb-92be-40e5-a73e-ee7b9ed83cab  
-Age:                46s  
-Created:            2025-05-12T18:27:29-04:00  
-URL:                https://sentianalyzer.1vd29ogku451.us-south.codeengine.appdomain.cloud  
-Cluster Local URL:  http://sentianalyzer.1vd29ogku451.svc.cluster.local  
-Console URL:        https://cloud.ibm.com/codeengine/project/us-south/d132aceb-92be-40e5-a73e-ee7b9ed83cab/application/sentianalyzer/configuration  
+Project ID:         ae6a3fa9-9fc1-46e8-ac4a-7cd73ea295ab  
+Age:                2m16s  
+Created:            2025-05-16T14:40:28-04:00  
+URL:                https://sentianalyzer.1vihsce2g4fh.us-south.codeengine.appdomain.cloud  
+Cluster Local URL:  http://sentianalyzer.1vihsce2g4fh.svc.cluster.local  
+Console URL:        https://cloud.ibm.com/codeengine/project/us-south/ae6a3fa9-9fc1-46e8-ac4a-7cd73ea295ab/application/sentianalyzer/configuration  
 Status Summary:     Application deployed successfully  
 
 Environment Variables:    
@@ -16,9 +16,9 @@ Environment Variables:
   Literal  CE_API_BASE_URL  https://api.us-south.codeengine.cloud.ibm.com  
   Literal  CE_APP           sentianalyzer  
   Literal  CE_DOMAIN        us-south.codeengine.appdomain.cloud  
-  Literal  CE_PROJECT_ID    d132aceb-92be-40e5-a73e-ee7b9ed83cab  
+  Literal  CE_PROJECT_ID    ae6a3fa9-9fc1-46e8-ac4a-7cd73ea295ab  
   Literal  CE_REGION        us-south  
-  Literal  CE_SUBDOMAIN     1vd29ogku451  
+  Literal  CE_SUBDOMAIN     1vihsce2g4fh  
 Image:                  us.icr.io/sn-labs-collinsmith/senti_analyzer  
 Resource Allocation:      
   CPU:                1  
@@ -30,10 +30,10 @@ Port:                   5000
 
 Revisions:          
   sentianalyzer-00001:    
-    Age:                46s  
+    Age:                2m16s  
     Latest:             true  
     Traffic:            100%  
-    Image:              us.icr.io/sn-labs-collinsmith/senti_analyzer (pinned to 706037)  
+    Image:              us.icr.io/sn-labs-collinsmith/senti_analyzer (pinned to b2d821)  
     Running Instances:  1  
 
 Runtime:            
@@ -49,19 +49,19 @@ Readiness Probe:
   Port:  0 (use listening port)  
 
 Conditions:         
-  Type                 OK    Age  Reason  
-  ConfigurationsReady  true  32s    
-  Ready                true  20s    
-  RoutesReady          true  20s    
+  Type                 OK    Age   Reason  
+  ConfigurationsReady  true  2m4s    
+  Ready                true  112s    
+  RoutesReady          true  112s    
 
 Events:             
-  Type    Reason   Age  Source              Messages  
-  Normal  Created  47s  service-controller  Created Configuration "sentianalyzer"  
-  Normal  Created  47s  service-controller  Created Route "sentianalyzer"  
+  Type    Reason   Age    Source              Messages  
+  Normal  Created  2m22s  service-controller  Created Configuration "sentianalyzer"  
+  Normal  Created  2m22s  service-controller  Created Route "sentianalyzer"  
 
 Instances:          
-  Name                                            Revision             Running  Status   Restarts  Age  
-  sentianalyzer-00001-deployment-696bc57b4-77r7j  sentianalyzer-00001  3/3      Running  0         46s  
+  Name                                             Revision             Running  Status       Restarts  Age  
+  sentianalyzer-00001-deployment-765894fc86-lrbp2  sentianalyzer-00001  2/3      Terminating  0         2m21s  
 
 For troubleshooting information visit: https://cloud.ibm.com/docs/codeengine?topic=codeengine-troubleshoot-apps.
 Run 'ibmcloud ce application events -n sentianalyzer' to get the system events of the application instances.
