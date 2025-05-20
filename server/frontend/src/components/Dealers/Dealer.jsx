@@ -76,7 +76,7 @@ return(
       </div>
       <div class="reviews_panel">
       {reviews.length === 0 && unreviewed === false ? (
-        <text>Loading Reviews....</text>
+        <text>Loading {reviews.length} Reviews....</text>
       ):  unreviewed === true? <div>No reviews yet! </div> :
       reviews.map(review => (
         <div className='review_panel'>
